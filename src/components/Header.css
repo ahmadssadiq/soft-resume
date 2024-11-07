@@ -1,0 +1,60 @@
+/* Header Styles */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--background-color);
+    z-index: 1000;
+}
+
+nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    background: radial-gradient(circle, #fcc419, #ff922b, #ff6b6b);
+    background-size: 200% 200%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: radialGradientAnimation 5s ease-in-out infinite;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+@keyframes radialGradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    color: var(--primary-color);
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}

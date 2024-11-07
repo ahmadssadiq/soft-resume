@@ -1,0 +1,96 @@
+/* Contact Section */
+.contact {
+    padding: 4rem 0;
+    margin: 30px;
+    border-radius: 9px;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Center-align the button */
+form button {
+    padding: 0.75rem 1.5rem;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+    align-self: center;
+    /* Center-align the button */
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
+.notification {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeInOut 4s forwards;
+}
+
+.notification.success {
+    background-color: #292929;
+    /* Green for success */
+    color: #fff;
+}
+
+/* Animation for fade in and out */
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
