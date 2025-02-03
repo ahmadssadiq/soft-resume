@@ -1,28 +1,23 @@
+// src/App.js
 import React from 'react';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Experience from './components/Experience';
+import Home from './components/Home';
+import NoteTakingApplication from './components/NoteTakingApplication';
+import BostonPoliceOvertime from './components/BostonPoliceOvertime';
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        {/* Home page route */}
+        <Route path="/" element={<Home />} />
+
+        {/* Project pages */}
+        <Route path="/projects/Note-Taking-Application" element={<NoteTakingApplication />} />
+        <Route path="/projects/Boston-Police-Overtime" element={<BostonPoliceOvertime />} />
+      </Routes>
+    </Router>
   );
 }
 

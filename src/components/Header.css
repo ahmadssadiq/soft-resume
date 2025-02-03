@@ -1,16 +1,21 @@
 /* Header Styles */
 header {
-    position: fixed;
+    position: relative;
+    /* Now the header is in the normal flow */
     width: 100%;
     background-color: var(--background-color);
     z-index: 1000;
+    padding: 1rem 0;
+    /* Optional: add padding for a better look */
+    border-bottom: 1px solid #333;
+    /* Optional: a subtle separator */
 }
 
 nav.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0 2rem;
 }
 
 .logo {

@@ -37,6 +37,7 @@
     z-index: 2;
 }
 
+/* Original desktop text styles */
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 0.2rem;
@@ -47,6 +48,7 @@
     margin-bottom: 1.75rem;
 }
 
+/* Original desktop image styles */
 .hero-content img {
     position: absolute;
     top: 60%;
@@ -93,5 +95,64 @@
 
     95% {
         opacity: 0.4;
+    }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .hero {
+        height: auto;
+        /* Let the content dictate the height */
+        padding: 20px 0;
+        flex-direction: column;
+        /* Stack content vertically */
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+
+    /* Adjust the image for mobile */
+    .hero-content img {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 80%;
+        /* Adjust width as needed */
+        max-width: 300px;
+        /* Prevent the image from being too large */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin-bottom: 20px;
+        /* Space between the image and text */
+    }
+
+    /* Disable hover effect on mobile by overriding it */
+    .hero-content img:hover {
+        transform: none;
+        border-radius: 10%;
+        /* Reset to the default non-hover style */
+    }
+
+    /* Optional: adjust text sizes for smaller screens */
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta {
+        font-size: 1rem;
+        padding: 10px 20px;
+        /* Adjust button padding if necessary */
     }
 }

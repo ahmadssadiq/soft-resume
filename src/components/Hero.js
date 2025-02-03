@@ -31,7 +31,7 @@ function Hero() {
                 <img src={profilePic} alt="Ahmad Sadiq" />
                 <h1>Hi, I'm Ahmad Sadiq</h1>
                 <p>Software Engineer</p>
-                <a href="#projects" className="cta">View My Work</a>
+                <a href="#projects" className="btn">View My Work</a>
             </div>
         </section>
     );
