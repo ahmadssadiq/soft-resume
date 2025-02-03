@@ -53,7 +53,7 @@ function BostonPoliceOvertime() {
                         </p>
                         <div className="project-links">
                             <a
-                                href="https://github.com/ahmadssadiq/BostonPoliceOvertimeDataAnalysis"
+                                href="https://github.com/BU-Spark/ds-police-overtime/tree/main/fa23-team-f"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn"
@@ -87,7 +87,7 @@ function BostonPoliceOvertime() {
                             onClick={() => setModalImage(BPD2)}
                             style={{ cursor: 'pointer' }}
                         />
-                        <p>The chart shows a 75% overlap between overtime and misconduct, underscoring potential areas for investigation.</p>
+                        <p>This section of the project examines the relationship between police spending, officer presence, and community safety. The Extension Project Questions focus on whether higher police presence correlates with lower crime rates and whether police spending improves community safety. Findings reveal that police reports per zip code were often lower than actual reported crime, suggesting that police presence did not significantly impact crime rates. A Venn diagram analysis showed little overlap between officers with frequent overtime and those with high field report activity, indicating that extra hours worked did not directly contribute to community safety. Additionally, trend analysis of BPD’s operating budget, overtime hours, and crime rates from 2015-2022 found no clear correlation, reinforcing the conclusion that higher police spending does not equate to improved safety outcomes.</p>
                         {/* Uncomment and adjust if you have a third image */}
                         {/*
             <img
