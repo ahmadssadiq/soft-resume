@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import Header from './Header'; // Common header
 import './NoteTakingApplication.css'; // Reusing the same CSS for layout and styling
+import Footer from './Footer';
+
 
 // Import images (adjust these imports as needed)
 import BPD1 from '../images/BostonPoliceOvertime1.png';
@@ -111,6 +113,9 @@ function BostonPoliceOvertime() {
                     </div>
                 </div>
             )}
+
+            {/* Global footer */}
+            <Footer />
         </div>
     );
 }

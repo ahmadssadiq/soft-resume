@@ -4,13 +4,15 @@ import './Projects.css';
 // Import the image for Note Taking Application as before
 import NoteAppImage from '../images/NoteTakingApplication.png';
 import BPD1 from '../images/BostonPoliceOvertime1.png';
+import QZ from '../images/QuizIt.png';
 
 const projectData = [
   {
-    title: 'Note Taking Application',
-    description: 'Developed a React web app for note management with CRUD operations and local storage persistence.',
-    image: NoteAppImage,
-    link: '#/projects/Note-Taking-Application',  // internal link
+    title: 'QuizIt - Quiz Application',
+    description: `Worked with American Civil Liberties Union (ACLU) and analyzed 8+ years of BPD overtime data using Python and pandas, uncovering a 260,000-hour annual discrepancy between worked and paid overtime hours.
+    Visualized data with matplotlib/seaborn, showing a 75% overlap between overtime and misconduct.`,
+    image: QZ, // assuming you moved this image to the public folder
+    link: '#/projects/Quiz-It',  // internal link
   },
   {
     title: 'Boston Police Overtime Data Analysis',
@@ -18,6 +20,12 @@ const projectData = [
     Visualized data with matplotlib/seaborn, showing a 75% overlap between overtime and misconduct.`,
     image: BPD1, // assuming you moved this image to the public folder
     link: '#/projects/Boston-Police-Overtime',  // internal link
+  },
+  {
+    title: 'Note Taking Application',
+    description: 'Developed a React web app for note management with CRUD operations and local storage persistence.',
+    image: NoteAppImage,
+    link: '#/projects/Note-Taking-Application',  // internal link
   },
   // Add more projects as needed
 ];
