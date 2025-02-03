@@ -24,11 +24,11 @@ const projectData = [
     link: '#/projects/Boston-Police-Overtime',  // internal link
   },
   {
-    title: 'Note Taking Application',
-    description: 'Developed a React web app for note management with CRUD operations and local storage persistence.',
-    image: NoteAppImage,
-    link: '#/projects/Note-Taking-Application',  // internal link
-  },
+  title: 'Note Taking Application',
+  description: 'Developed a React-based checklist application that enables users to dynamically create, track, and manage their tasks. The app uses the useState hook for real-time state management, features an animated progress bar to reflect task completion, and provides an intuitive interface for adding and editing checklist descriptions.',
+  image: NoteAppImage,
+  link: '#/projects/Note-Taking-Application',
+}
   // Add more projects as needed
 ];
 
