@@ -32,7 +32,7 @@ const projectData = [
   },
   {
     title: 'Health And Weather Analyzer',
-    description: 'Developed a React and Node.js-based application that integrates real-time weather data with health conditions to provide personalized health recommendations. Utilizes Axios for API requests, React hooks for state management, and Google authentication for secure user login. Features weather alerts, dynamic health condition lookup, and a responsive Tailwind CSS UI for seamless user experience.',
+    description: 'Developed a React and Node.js-based application that integrates real-time weather data with health conditions to provide personalized health recommendations. Utilizes Google authentication for secure user login. Features a responsive Tailwind CSS UI for seamless user experience.',
     image: HW,
     link: '#/projects/Health-And-Weather',
   }
