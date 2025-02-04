@@ -4,6 +4,7 @@ import './NoteTakingApplication'; // Styling for Health and Weather Analyzer
 
 // Import images
 import HW1 from '../images/hw1.png';
+import HW2 from '../images/hw2.png';
 import HWvideo from '../images/final_submission_411.mp4';
 
 function HealthAndWeather() {
@@ -81,7 +82,16 @@ function HealthAndWeather() {
                             alt="Health and Weather Analyzer Dashboard"
                             style={{ cursor: 'pointer' }}
                         />
-                        <p>The *dashboard view displays real-time weather data, including temperature, humidity, and weather conditions essential for generating personalized health recommendations.</p>
+                        <p>The dashboard view displays real-time weather data, including temperature, humidity, and weather conditions essential for generating personalized health recommendations.</p>
+                    </div>
+
+                    <div className="project-images">
+                        <img
+                            src={HW2}
+                            alt="Health and Weather Analyzer Dashboard"
+                            style={{ cursor: 'pointer' }}
+                        />
+                        <p>This is the signup page where google authentication is an option to sign in using firebase.</p>
                     </div>
 
                 </section>

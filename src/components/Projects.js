@@ -26,13 +26,13 @@ const projectData = [
   },
   {
     title: 'Note Taking Application',
-    description: 'Developed a React-based checklist application that enables users to dynamically create, track, and manage their tasks. The app uses the useState hook for real-time state management, features an animated progress bar to reflect task completion, and provides an intuitive interface for adding and editing checklist descriptions.',
+    description: 'Developed a React and Node.js-based application that integrates real-time weather data with health conditions to provide personalized health recommendations. Utilizes Axios for API requests, React hooks for state management, and Google authentication for secure user login. Features weather alerts, dynamic health condition lookup, and a responsive Tailwind CSS UI for seamless user experience.',
     image: NoteAppImage,
     link: '#/projects/Note-Taking-Application',
   },
   {
     title: 'Health And Weather Analyzer',
-    description: 'Developed a React-based checklist application that enables users to dynamically create, track, and manage their tasks. The app uses the useState hook for real-time state management, features an animated progress bar to reflect task completion, and provides an intuitive interface for adding and editing checklist descriptions.',
+    description: '',
     image: HW,
     link: '#/projects/Health-And-Weather',
   }
