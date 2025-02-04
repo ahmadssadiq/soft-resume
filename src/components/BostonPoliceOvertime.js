@@ -49,7 +49,7 @@ function BostonPoliceOvertime() {
                         <h2>In Depth</h2>
                         <p>
                             The project utilized multiple datasets, including earnings, crime incidents, field activity, and budget records from the City of Boston.
-                            Using Python with libraries such as Pandas, Matplotlib, and Sklearn, we processed and analyzed these datasets to uncover spending inefficiencies.
+                            Using <code className='code-block'>Python</code> utilizing libraries including <code className='code-block'>Pandas</code>, <code className='code-block'>Matplotlib</code>, and <code className='code-block'>Sklearn</code>, we processed and analyzed these datasets to uncover spending inefficiencies.
                             Regression models indicated that crime rates were not a predictor of overtime hours or police budget allocations.
                             Further analysis of specific officers revealed that some of the most frequent overtime users were also officers with past complaints and high salaries.
                         </p>

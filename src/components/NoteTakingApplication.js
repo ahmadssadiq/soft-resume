@@ -25,7 +25,7 @@ function NoteTakingApplication() {
                     <div className="project-description">
                         <h2>Overview</h2>
                         <p>
-                            The Checklist Application is a React-based productivity tool that allows users to dynamically create,
+                            The Checklist Application is a <code className='code-block'>React</code>-based productivity tool that allows users to dynamically create,
                             track, and manage their tasks. It features a progress bar, dynamic item addition, and the ability to add
                             descriptions to checklist items, providing an intuitive task management experience.
                         </p>
@@ -34,7 +34,7 @@ function NoteTakingApplication() {
                             <li>Dynamic item creation using <code className="code-block">useState</code></li>
                             <li>Task completion tracking with an animated progress bar</li>
                             <li>Ability to add and edit descriptions for each checklist item</li>
-                            <li>Styled-components for a modern UI</li>
+                            <li>Styled-components for a <code className='code-block'>Modern UI</code></li>
                             <li>Animation effects with <code className="code-block">react-transition-group</code> for smoother user experience</li>
                         </ul>
                         <h2>In Depth</h2>
