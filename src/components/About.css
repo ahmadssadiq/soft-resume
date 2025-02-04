@@ -27,3 +27,13 @@
 .about-text p {
     color: var(--secondary-color);
 }
+
+.code-block {
+
+    border: 1px solid #d01111;
+    /* Light blue border */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 2px 6px;
+    font-family: monospace;
+}

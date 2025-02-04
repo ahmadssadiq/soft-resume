@@ -73,6 +73,6 @@
 }
 
 .skill-item:hover {
-    background-color: #005bb5;
+    background-color: orange;
     transition: ease-in-out 0.4s;
 }
