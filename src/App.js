@@ -7,6 +7,7 @@ import NoteTakingApplication from './components/NoteTakingApplication';
 import BostonPoliceOvertime from './components/BostonPoliceOvertime';
 import QuizIt from './components/QuizIt';
 import ScrollToTop from './components/ScrollToTop';
+import HealthAndWeather from './components/HealthAndWeather';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/projects/Note-Taking-Application" element={<NoteTakingApplication />} />
         <Route path="/projects/Boston-Police-Overtime" element={<BostonPoliceOvertime />} />
         <Route path="/projects/Quiz-It" element={<QuizIt />} />
+        <Route path="/projects/Health-And-Weather" element={<HealthAndWeather />} />
       </Routes>
     </Router>
   );

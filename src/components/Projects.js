@@ -5,6 +5,7 @@ import './Projects.css';
 import NoteAppImage from '../images/NoteTakingApplication.png';
 import BPD1 from '../images/BostonPoliceOvertime1.png';
 import QZ from '../images/QuizIt.png';
+import HW from '../images/healthandweather.png';
 
 const projectData = [
   {
@@ -24,12 +25,17 @@ const projectData = [
     link: '#/projects/Boston-Police-Overtime',  // internal link
   },
   {
-  title: 'Note Taking Application',
-  description: 'Developed a React-based checklist application that enables users to dynamically create, track, and manage their tasks. The app uses the useState hook for real-time state management, features an animated progress bar to reflect task completion, and provides an intuitive interface for adding and editing checklist descriptions.',
-  image: NoteAppImage,
-  link: '#/projects/Note-Taking-Application',
-}
-  // Add more projects as needed
+    title: 'Note Taking Application',
+    description: 'Developed a React-based checklist application that enables users to dynamically create, track, and manage their tasks. The app uses the useState hook for real-time state management, features an animated progress bar to reflect task completion, and provides an intuitive interface for adding and editing checklist descriptions.',
+    image: NoteAppImage,
+    link: '#/projects/Note-Taking-Application',
+  },
+  {
+    title: 'Health And Weather Analyzer',
+    description: 'Developed a React-based checklist application that enables users to dynamically create, track, and manage their tasks. The app uses the useState hook for real-time state management, features an animated progress bar to reflect task completion, and provides an intuitive interface for adding and editing checklist descriptions.',
+    image: HW,
+    link: '#/projects/Health-And-Weather',
+  }
 ];
 
 function Projects() {

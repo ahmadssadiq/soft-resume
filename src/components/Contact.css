@@ -94,3 +94,20 @@ form button:hover {
         transform: translateY(0);
     }
 }
+
+/* Use CSS Grid for images */
+.project-images {
+    width: calc(150px * 2 + 1rem);
+    /* 2 images at 150px each + 1rem gap */
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.project-images img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}

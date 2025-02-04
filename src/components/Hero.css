@@ -98,6 +98,12 @@
     }
 }
 
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 768px) {
     .hero {

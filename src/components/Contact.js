@@ -51,7 +51,9 @@ function Contact() {
                     {/* Notification message that appears on successful submission */}
                     {isSent && <div className="notification success">Your message has been sent successfully!</div>}
                 </form>
+
             </div>
+
         </section>
     );
 }

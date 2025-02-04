@@ -148,6 +148,39 @@
     margin-top: 1.5rem;
 }
 
+/* Styles for the Health and Weather Analyzer video demo */
+.project-video1 {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.project-video1 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Create a smaller, fixed-size 16:9 container */
+.video-container1 {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    /* Limit the width to 400px */
+    height: 200px;
+    /* 16:9 ratio: 400px * 9/16 = 225px */
+    margin: 0 auto;
+    /* Center the container */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the video fills the container */
+.video-container1 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .project-images {
     flex: 1;
