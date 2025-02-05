@@ -7,7 +7,7 @@ function Header() {
     return (
         <header className='header'>
             <nav className="container">
-                <div className="logo">[ AHMAD SADIQ ]</div>
+                <div className="logo">AHMAD SADIQ.</div>
                 <ul className="nav-links">
                     <li><Link smooth className="nav-link" to="/#hero">Home</Link></li>
                     <li><Link smooth className="nav-link" to="/#about">About</Link></li>
