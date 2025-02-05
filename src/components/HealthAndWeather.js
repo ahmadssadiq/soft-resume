@@ -83,9 +83,6 @@ function HealthAndWeather() {
                             style={{ cursor: 'pointer' }}
                         />
                         <p>The dashboard view displays real-time weather data, including temperature, humidity, and weather conditions essential for generating personalized health recommendations.</p>
-                    </div>
-
-                    <div className="project-images">
                         <img
                             src={HW2}
                             alt="Health and Weather Analyzer Dashboard"
@@ -93,7 +90,6 @@ function HealthAndWeather() {
                         />
                         <p>This is the signup page where google authentication is an option to sign in using firebase.</p>
                     </div>
-
                 </section>
             </div >
         </div >
