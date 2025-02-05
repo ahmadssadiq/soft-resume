@@ -44,7 +44,7 @@ function Hero() {
                         className="btn"
                         style={{ marginLeft: '1rem' }}
                     >
-                        View Final Report
+                        View my Resume
                     </a>
                 </div>
             </div>
