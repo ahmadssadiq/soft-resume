@@ -14,7 +14,7 @@ import BPD2 from '../images/BostonPoliceOvertime2.png';
 // Import the PDF file
 import FinalReport from '../images/Police Overtime F - Final Report-2.pdf';
 
-function DuneAI() {
+function BostonPoliceOvertime() {
     // State to hold the currently selected image for modal display
     const [modalImage, setModalImage] = useState(null);
 
@@ -120,4 +120,4 @@ function DuneAI() {
     );
 }
 
-export default DuneAI;
+export default BostonPoliceOvertime;

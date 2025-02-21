@@ -14,11 +14,11 @@ function SpotlightBox({ children }) {
     }
 
     const gradientBackground = useMotionTemplate`
-  radial-gradient(650px circle at ${mouseX}px ${mouseY}px,
-    rgba(249, 115, 22, 0.3),
-    transparent 80%
-  )
-`;
+      radial-gradient(650px circle at ${mouseX}px ${mouseY}px,
+        rgba(249, 115, 22, 0.3),
+        transparent 80%
+      )
+    `;
 
     return (
         <div className="spotlight-container group" onMouseMove={handleMouseMove}>
@@ -43,6 +43,7 @@ function Experience() {
                 'Constructed a Python barcode scanner to automate task assignment.',
                 'Developed unit tests with Google Test for code reliability.',
             ],
+            link: '#/experience/DuneAI' // Link for DuneAI only
         },
         {
             company: 'AheadCare',
@@ -84,6 +85,12 @@ function Experience() {
                                     <li key={idx}>{item}</li>
                                 ))}
                             </ul>
+                            {/* Render the Learn More button only if a link exists (i.e., for DuneAI) */}
+                            {exp.link && (
+                                <a href={exp.link} className="btn">
+                                    Learn More
+                                </a>
+                            )}
                         </div>
                     </SpotlightBox>
                 ))}
