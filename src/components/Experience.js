@@ -1,5 +1,35 @@
 import React from 'react';
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import './Experience.css';
+
+// A reusable spotlight container component
+function SpotlightBox({ children }) {
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+
+    function handleMouseMove(e) {
+        const { left, top } = e.currentTarget.getBoundingClientRect();
+        mouseX.set(e.clientX - left);
+        mouseY.set(e.clientY - top);
+    }
+
+    const gradientBackground = useMotionTemplate`
+  radial-gradient(650px circle at ${mouseX}px ${mouseY}px,
+    rgba(249, 115, 22, 0.3),
+    transparent 80%
+  )
+`;
+
+    return (
+        <div className="spotlight-container group" onMouseMove={handleMouseMove}>
+            <motion.div
+                className="spotlight-overlay pointer-events-none absolute -inset-px rounded transition duration-300 group-hover:opacity-100"
+                style={{ background: gradientBackground }}
+            />
+            {children}
+        </div>
+    );
+}
 
 function Experience() {
     const experiences = [
@@ -43,15 +73,19 @@ function Experience() {
             <h2>Experience</h2>
             <div className="experience-grid">
                 {experiences.map((exp, index) => (
-                    <div className="experience-item" key={index}>
-                        <h3>{exp.company}</h3>
-                        <p><strong>{exp.role}</strong> | {exp.duration}</p>
-                        <ul>
-                            {exp.responsibilities.map((item, idx) => (
-                                <li key={idx}>{item}</li>
-                            ))}
-                        </ul>
-                    </div>
+                    <SpotlightBox key={index}>
+                        <div className="experience-item">
+                            <h3>{exp.company}</h3>
+                            <p>
+                                <strong>{exp.role}</strong> | {exp.duration}
+                            </p>
+                            <ul>
+                                {exp.responsibilities.map((item, idx) => (
+                                    <li key={idx}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </SpotlightBox>
                 ))}
             </div>
         </section>
