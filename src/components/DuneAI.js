@@ -5,7 +5,7 @@ import Footer from './Footer';
 import './NoteTakingApplication.css'; // Reusing the same CSS for layout and styling
 
 // // Import an image for DuneAI (replace with your actual image)
-// import DuneAIImage from '../images/DuneAI.png';
+import DuneAIImage from '../images/duneai_robot.png';
 // Optionally, import a second image if you have one
 // import DuneAIImage2 from '../images/DuneAI2.png';
 
@@ -24,7 +24,6 @@ function DuneAI() {
                 <h1 className="project-title">
                     DuneAI - Robotics Software Engineer <span role="img" aria-label="robot">🤖</span>
                 </h1>
-
                 <section className="project-content">
                     <div className="project-description">
                         <h2>Overview</h2>
@@ -69,9 +68,9 @@ function DuneAI() {
 
                     <div className="project-images">
                         <img
-                            // src={DuneAIImage}
+                            src={DuneAIImage}
                             alt="DuneAI project visualization"
-                            // onClick={() => setModalImage(DuneAIImage)}
+                            onClick={() => setModalImage(DuneAIImage)}
                             style={{ cursor: 'pointer' }}
                         />
                         <p>
@@ -100,6 +99,15 @@ function DuneAI() {
                     </div>
                 </div>
             )}
+
+            <div className="project-image-container">
+                <img
+                    src={DuneAIImage}
+                    alt="DuneAI project visualization"
+                    onClick={() => setModalImage(DuneAIImage)}
+                    style={{ cursor: 'pointer' }}
+                />
+            </div>
 
             {/* Global footer */}
             <Footer />
