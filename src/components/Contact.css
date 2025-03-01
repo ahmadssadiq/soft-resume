@@ -3,6 +3,16 @@
     padding: 4rem 0;
     margin: 30px;
     border-radius: 9px;
+    perspective: 1000px;
+    background: linear-gradient(45deg, #f77f00 25%, transparent 25%),
+        linear-gradient(-45deg,
+            #f77f00 25%,
+            transparent 25%,
+            transparent 75%,
+            #f77f00 75%,
+            #f77f30);
+    background-size: 50px 50px;
+
 }
 
 .contact h2 {
@@ -26,7 +36,7 @@ form {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    color: ;
 }
 
 .form-group input,
@@ -120,7 +130,7 @@ form button:hover {
     font-size: 17px;
     font-weight: 500;
     color: #ffffff;
-    border: 3px solid #FFA500;
+    border: 3px solid #d62828;
     border-radius: 8px;
     box-shadow: 0 0 0 #FFA5008c;
     transition: all 0.3s ease-in-out;
