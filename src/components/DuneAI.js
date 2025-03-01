@@ -44,26 +44,6 @@ function DuneAI() {
                         <p>
                             Working in a startup environment, I embraced multiple roles and took initiative in leadership and technical problem solving. This project challenged me technically and honed my collaborative skills, marking it as one of the most rewarding experiences of my career.
                         </p>
-                        <div className="project-links">
-                            {/* Link to your resume or GitHub repository, if applicable */}
-                            <a
-                                href="https://github.com/yourusername/your-duneai-repo"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn"
-                            >
-                                View on GitHub
-                            </a>
-                            <a
-                                href="https://yourwebsite.com/resume.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn"
-                                style={{ marginLeft: '1rem' }}
-                            >
-                                View Resume
-                            </a>
-                        </div>
                     </div>
 
                     <div className="project-images">
