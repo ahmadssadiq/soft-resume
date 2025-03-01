@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import { HashLink as Link } from 'react-router-hash-link'; // Import HashLink
+import { HashLink as Link } from 'react-router-hash-link';
 import './Hero.css';
 import profilePic from '../images/profile.jpg';
-
 import resume from '../images/Ahmad_Sadiq_Resume_jan29.pdf';
 
 function Hero() {
@@ -32,8 +31,18 @@ function Hero() {
             <div className="container hero-content">
                 <img src={profilePic} alt="Ahmad Sadiq" />
                 <h1>Hi, I'm Ahmad Sadiq</h1>
-                <p>Software Engineer</p>
-                <div className='btns'>                {/* Use HashLink to smoothly scroll to projects */}
+
+                {/* Loader Effect (Replacing <p>Software Engineer</p>) */}
+                <div className="loader">
+                    <div className="words">
+                        <span className="word">Software Engineer</span>
+                        <span className="word">CS @ Boston University</span>
+                        <span className="word">Football Lover</span>
+                        <span className="word">Tennis Enthusiast</span>
+                    </div>
+                </div>
+
+                <div className="btns">
                     <Link smooth to="/#projects" className="btn">
                         View My Work
                     </Link>

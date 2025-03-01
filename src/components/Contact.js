@@ -9,20 +9,18 @@ function Contact() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        const button = document.getElementById('button');
-        button.value = 'Sending...';
+        const button = document.getElementById('contactButton');
+        button.innerText = 'Sending...';
 
         emailjs.sendForm('service_ysjakvs', 'template_w4zzspg', form.current, 'iJ-hdO0tA1ycxu4nH')
             .then(() => {
-                button.value = 'Send Email';
-                setIsSent(true);  // Show success notification
-                form.current.reset(); // Reset the form fields after submission
-
-                // Hide notification after 3 seconds
+                button.innerText = 'Send Email';
+                setIsSent(true);
+                form.current.reset();
                 setTimeout(() => setIsSent(false), 3000);
             }, (err) => {
-                button.value = 'Send Email';
-                console.error(err); // Handle error without showing alert
+                button.innerText = 'Send Email';
+                console.error(err);
             });
     };
 
@@ -46,14 +44,19 @@ function Contact() {
                         <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
 
-                    <input type="submit" id="button" value="Send Email" className="btn" />
+                    <button id="contactButton" className="contact-btn" type="submit">
+                        Send Email
+                        <span className="star-1"></span>
+                        <span className="star-2"></span>
+                        <span className="star-3"></span>
+                        <span className="star-4"></span>
+                        <span className="star-5"></span>
+                        <span className="star-6"></span>
+                    </button>
 
-                    {/* Notification message that appears on successful submission */}
                     {isSent && <div className="notification success">Your message has been sent successfully!</div>}
                 </form>
-
             </div>
-
         </section>
     );
 }

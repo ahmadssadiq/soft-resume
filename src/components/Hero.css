@@ -12,6 +12,11 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
 }
 
 .hero::before {
@@ -21,8 +26,6 @@
     left: 0;
     width: 300%;
     height: 300%;
-    background: radial-gradient(circle, rgba(228, 86, 4, 0.2) 1px, transparent 1px),
-        radial-gradient(circle, rgba(241, 3, 3, 0.15) 1px, transparent 1px);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
     opacity: 0.2;
@@ -37,18 +40,20 @@
     z-index: 2;
 }
 
-/* Original desktop text styles */
+/* Adjust the spacing between elements */
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 1.5rem;
+    /* Increased for better spacing */
 }
 
+/* If you don't need the paragraph, you can remove it or reduce margin */
 .hero-content p {
     font-size: 1.25rem;
     margin-bottom: 1.75rem;
 }
 
-/* Original desktop image styles */
+/* Keep the original image styles */
 .hero-content img {
     position: absolute;
     top: 60%;
@@ -69,7 +74,16 @@
     transition: 0.3s;
 }
 
-/* Keyframes for Flickering Stars */
+/* Buttons Container */
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    /* Added margin to push it away from the loader */
+}
+
+/* Flickering background keyframes */
 @keyframes flicker {
 
     0%,
@@ -98,21 +112,117 @@
     }
 }
 
-.btns {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+/* New Cool Button Styles */
+.cool-button {
+    font-size: 1.4em;
+    padding: 0.6em 0.8em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #000000b4;
+    position: relative;
+    z-index: 1;
 }
 
+/* Container for the cool animation effect */
+.cool-button-container {
+    position: relative;
+    padding: 3px;
+    background: linear-gradient(90deg, #FFA500, #FFFF00);
+    border-radius: 0.9em;
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+.cool-button-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 0.9em;
+    z-index: -10;
+    filter: blur(0);
+    transition: filter 0.4s ease;
+}
+
+.cool-button-container:hover::before {
+    background: linear-gradient(90deg, #FFA500, #FFFF00);
+    filter: blur(1.2em);
+}
+
+.cool-button-container:active::before {
+    filter: blur(0.2em);
+}
+
+/* Loader container */
+/* Loader container */
+.loader {
+    margin: 1.5rem auto !important;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #ece9f4;
+    width: 300px;
+    /* Increased width to accommodate longer phrases */
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* The moving words container */
+.words {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: spinWords 6.5s infinite;
+}
+
+/* Each word is stacked vertically in the same container */
+.word {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+    /* Prevents the text from wrapping */
+}
+
+/* Animate the .words container upwards to reveal each word in sequence */
+@keyframes spinWords {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-30px);
+    }
+
+    40% {
+        transform: translateY(-60px);
+    }
+
+    60% {
+        transform: translateY(-90px);
+    }
+
+    80% {
+        transform: translateY(-120px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 
 /* Mobile Styles */
 @media only screen and (max-width: 768px) {
     .hero {
         height: auto;
-        /* Let the content dictate the height */
         padding: 20px 0;
         flex-direction: column;
-        /* Stack content vertically */
     }
 
     .hero-content {
@@ -124,30 +234,23 @@
         position: relative;
     }
 
-    /* Adjust the image for mobile */
     .hero-content img {
         position: relative;
         top: auto;
         left: auto;
         transform: none;
         width: 80%;
-        /* Adjust width as needed */
         max-width: 300px;
-        /* Prevent the image from being too large */
         height: auto;
-        /* Maintain aspect ratio */
         margin-bottom: 20px;
-        /* Space between the image and text */
     }
 
-    /* Disable hover effect on mobile by overriding it */
     .hero-content img:hover {
         transform: none;
         border-radius: 10%;
-        /* Reset to the default non-hover style */
     }
 
-    /* Optional: adjust text sizes for smaller screens */
+    /* Adjust text sizes for smaller screens */
     .hero-content h1 {
         font-size: 2rem;
         margin-top: 10px;
@@ -160,6 +263,5 @@
     .cta {
         font-size: 1rem;
         padding: 10px 20px;
-        /* Adjust button padding if necessary */
     }
 }
