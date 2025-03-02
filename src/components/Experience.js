@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
+import Header from './Header'; // Common header
+import Footer from './Footer';
 import './Experience.css';
 
-// A reusable spotlight container component
-function SpotlightBox({ children }) {
+// Reusable SpotlightBox that accepts a custom gradient color
+function SpotlightBox({ children, color = 'rgba(249,115,22,0.3)' }) {
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
@@ -14,11 +16,11 @@ function SpotlightBox({ children }) {
     }
 
     const gradientBackground = useMotionTemplate`
-      radial-gradient(650px circle at ${mouseX}px ${mouseY}px,
-        rgba(249, 115, 22, 0.3),
-        transparent 80%
-      )
-    `;
+    radial-gradient(650px circle at ${mouseX}px ${mouseY}px,
+      ${color},
+      transparent 80%
+    )
+  `;
 
     return (
         <div className="spotlight-container group" onMouseMove={handleMouseMove}>
@@ -43,7 +45,7 @@ function Experience() {
                 'Constructed a Python barcode scanner to automate task assignment.',
                 'Developed unit tests with Google Test for code reliability.',
             ],
-            link: '#/experience/DuneAI' // Link for DuneAI only
+            link: '#/experience/DuneAI'
         },
         {
             company: 'AheadCare',
@@ -69,12 +71,19 @@ function Experience() {
         },
     ];
 
+    // Define an array of gradient colours for each experience box
+    const colors = [
+        'rgba(214,40,40,0.3)',   // d62828
+        'rgba(247,127,0,0.3)',    // f77f00
+        'rgba(252,191,73,0.3)'    // fcbf49
+    ];
+
     return (
         <section id="experience" className="experience-section">
             <h2>Experience</h2>
             <div className="experience-grid">
                 {experiences.map((exp, index) => (
-                    <SpotlightBox key={index}>
+                    <SpotlightBox key={index} color={colors[index % colors.length]}>
                         <div className="experience-item">
                             <h3>{exp.company}</h3>
                             <p>
@@ -85,7 +94,6 @@ function Experience() {
                                     <li key={idx}>{item}</li>
                                 ))}
                             </ul>
-                            {/* Render the Learn More button only if a link exists (i.e., for DuneAI) */}
                             {exp.link && (
                                 <a href={exp.link} className="btn">
                                     Learn More
