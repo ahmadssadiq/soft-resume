@@ -8,7 +8,6 @@ function Contact() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
         const button = document.getElementById('contactButton');
         button.innerText = 'Sending...';
 
@@ -27,35 +26,38 @@ function Contact() {
     return (
         <section id="contact" className="contact">
             <div className="container">
-                <h2>Contact Me</h2>
-                <form ref={form} onSubmit={sendEmail} id="form">
-                    <div className="form-group">
-                        <label htmlFor="from_name">Your Name</label>
-                        <input type="text" id="from_name" name="from_name" required />
+                <div className="contact-grid">
+                    {/* Left side: Pattern background */}
+                    <div className="contact-pattern"></div>
+                    {/* Right side: Contact form */}
+                    <div className="contact-form">
+                        <h2>Contact Me</h2>
+                        <form ref={form} onSubmit={sendEmail} id="form">
+                            <div className="form-group">
+                                <label htmlFor="from_name">Your Name</label>
+                                <input type="text" id="from_name" name="from_name" required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">Your Email</label>
+                                <input type="email" id="email" name="email" required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button id="contactButton" className="contact-btn" type="submit">
+                                Send Email
+                                <span className="star-1"></span>
+                                <span className="star-2"></span>
+                                <span className="star-3"></span>
+                                <span className="star-4"></span>
+                                <span className="star-5"></span>
+                                <span className="star-6"></span>
+                            </button>
+                            {isSent && <div className="notification success">Your message has been sent successfully!</div>}
+                        </form>
                     </div>
-
-                    <div className="form-group">
-                        <label htmlFor="email">Your Email</label>
-                        <input type="email" id="email" name="email" required />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                    </div>
-
-                    <button id="contactButton" className="contact-btn" type="submit">
-                        Send Email
-                        <span className="star-1"></span>
-                        <span className="star-2"></span>
-                        <span className="star-3"></span>
-                        <span className="star-4"></span>
-                        <span className="star-5"></span>
-                        <span className="star-6"></span>
-                    </button>
-
-                    {isSent && <div className="notification success">Your message has been sent successfully!</div>}
-                </form>
+                </div>
             </div>
         </section>
     );
