@@ -1,26 +1,20 @@
-// src/components/DuneAIDetails.js
 import React, { useState } from 'react';
 import Header from './Header'; // Common header
 import Footer from './Footer';
 import './NoteTakingApplication.css'; // Reusing the same CSS for layout and styling
 
-// // Import an image for DuneAI (replace with your actual image)
+// Import video file for DuneAI
 import DuneAIImage from '../images/duneai_robot.png';
-// Optionally, import a second image if you have one
-// import DuneAIImage2 from '../images/DuneAI2.png';
+import DuneAiVideo from '../images/MAPF.mp4';
 
 function DuneAI() {
-    // State to hold the currently selected image for modal display (if needed)
     const [modalImage, setModalImage] = useState(null);
 
     return (
         <div className="project-page">
-            {/* Global header */}
             <Header />
 
-            {/* Page content wrapper */}
             <div className="project-content-wrapper">
-                {/* Page title */}
                 <h1 className="project-title">
                     DuneAI - Robotics Software Engineer <span role="img" aria-label="robot">🤖</span>
                 </h1>
@@ -47,14 +41,16 @@ function DuneAI() {
                     </div>
 
                     <div className="project-images">
-                        <img
-                            src={DuneAIImage}
-                            alt="DuneAI project visualization"
-                            onClick={() => setModalImage(DuneAIImage)}
-                            style={{ cursor: 'pointer' }}
-                        />
+                        {/* Replace the image with a video element */}
+                        <video
+                            src={DuneAiVideo}
+                            controls
+                            style={{ cursor: 'pointer', width: '100%' }}
+                        >
+                            Your browser does not support the video tag.
+                        </video>
                         <p>
-                            The image illustrates the simulation environment where multi-agent pathfinding algorithms were implemented. Robots were designed to efficiently collect and deliver packages, avoiding collisions and optimizing routes.
+                            The video illustrates the simulation environment where multi-agent pathfinding algorithms were implemented. Robots were designed to efficiently collect and deliver packages, avoiding collisions and optimizing routes.
                         </p>
                         {/*
                         Uncomment if you have a second image
@@ -70,7 +66,6 @@ function DuneAI() {
                 </section>
             </div>
 
-            {/* Modal for enlarged image view */}
             {modalImage && (
                 <div className="modal" onClick={() => setModalImage(null)}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -89,7 +84,6 @@ function DuneAI() {
                 />
             </div>
 
-            {/* Global footer */}
             <Footer />
         </div>
     );
