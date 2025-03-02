@@ -1,7 +1,6 @@
-# Getting Started with Create React App
+# Ahmad Sadiq's portfolio 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+In this project, i have defined how to run my portfolio code in a local server.
 ## Available Scripts
 
 In the project directory, you can run:
