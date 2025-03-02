@@ -50,7 +50,7 @@ function DuneAI() {
                             Your browser does not support the video tag.
                         </video>
                         <p>
-                            The video illustrates the simulation environment where multi-agent pathfinding algorithms were implemented. Robots were designed to efficiently collect and deliver packages, avoiding collisions and optimizing routes.
+                            The video illustrates the simulation environment, which we made, where multi-agent pathfinding algorithms were implemented. Robots were designed to efficiently collect and deliver packages, avoiding collisions and optimizing routes.
                         </p>
                         {/*
                         Uncomment if you have a second image
