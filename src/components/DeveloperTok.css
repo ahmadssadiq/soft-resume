@@ -1,0 +1,208 @@
+/* Custom styling for DeveloperTok project */
+.portfolio-item.developer-tok {
+    background-color: #1e1e1e;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid #333;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+
+.portfolio-item.developer-tok:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Create the dark background with subtle texture */
+.portfolio-item.developer-tok::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+    opacity: 1;
+    z-index: -2;
+}
+
+/* Add the colorful gradient at the bottom */
+.portfolio-item.developer-tok::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(90deg,
+            #ff0080 0%,
+            #7928ca 50%,
+            #ff8c00 100%);
+    opacity: 0.7;
+    z-index: -1;
+    border-radius: 0 0 12px 12px;
+    filter: blur(20px);
+    transform: translateY(20%);
+}
+
+/* Add a subtle indicator for work in progress */
+.portfolio-item.developer-tok .content h3::after {
+    content: " (In Progress)";
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #ff0080;
+    opacity: 0.8;
+}
+
+/* Style the content area to be more readable */
+.portfolio-item.developer-tok .content {
+    position: relative;
+    z-index: 1;
+    background: rgba(18, 18, 18, 0.7);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    backdrop-filter: blur(5px);
+}
+
+/* Style the button to match the theme */
+.portfolio-item.developer-tok .btn {
+    background: white;
+    color: #121212;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item.developer-tok .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Add a "work in progress" badge */
+.wip-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff0080;
+    box-shadow: 0 0 10px rgba(255, 0, 128, 0.7);
+    z-index: 10;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+/* Custom styling for the project page */
+.developer-tok-page {
+    background-color: #121212;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Add a subtle pattern to the background */
+.developer-tok-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Only cover the main content area, not the footer */
+    height: calc(100% - 100px);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 0, 128, 0.05) 0%, transparent 30%),
+        radial-gradient(circle at 90% 30%, rgba(121, 40, 202, 0.05) 0%, transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(255, 140, 0, 0.05) 0%, transparent 40%);
+    opacity: 1;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Add the gradient effect that stops before the footer */
+.developer-tok-page::after {
+    content: "";
+    position: absolute;
+    bottom: 100px;
+    /* Position it above the footer */
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(90deg,
+            #ff0080 0%,
+            #7928ca 50%,
+            #ff8c00 100%);
+    opacity: 0.7;
+    z-index: -2;
+    filter: blur(50px);
+    transform: translateY(30%);
+    pointer-events: none;
+}
+
+/* Style the project content for better readability */
+.developer-tok-page .project-content-wrapper {
+    position: relative;
+    z-index: 1;
+    background: rgba(18, 18, 18, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* Subtle styling for the project title */
+.developer-tok-page .project-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+/* Add a subtle indicator for work in progress */
+.developer-tok-page .project-title::after {
+    content: "(In Progress)";
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 0.5em;
+    color: #ff0080;
+    vertical-align: middle;
+}
+
+/* Style code blocks */
+.developer-tok-page .code-block {
+    background: rgba(255, 0, 128, 0.1);
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    color: #ff0080;
+}
+
+/* Ensure the footer is above the gradient */
+footer {
+    position: relative;
+    z-index: 2;
+}

@@ -1,13 +1,24 @@
 // src/components/Projects.js
 import React from 'react';
 import './Projects.css';
+import './DeveloperTok.css'; // Import the custom CSS
 // Import the image for Note Taking Application as before
 import NoteAppImage from '../images/NoteTakingApplication.png';
 import BPD1 from '../images/BostonPoliceOvertime1.png';
 import QZ from '../images/QuizIt.png';
 import HW from '../images/healthandweather.png';
+// You'll need to add an image for DeveloperTok
+// For now, we'll use a placeholder reference
+// import DevTok from '../images/DeveloperTok.png';
 
 const projectData = [
+  {
+    title: 'DeveloperTok',
+    description: 'A social media platform designed specifically for developers to share short-form coding tips, tricks, and solutions. Built with React, Node.js, and MongoDB, featuring video uploads, code snippet sharing, and a recommendation algorithm.',
+    image: NoteAppImage, // Placeholder - replace with DevTok image when available
+    link: '#/projects/DeveloperTok',
+    isWip: true, // Flag to indicate work in progress
+  },
   {
     title: 'QuizIt - Interactive Quiz Application',
     description: `Developed a Django-based web application enabling users to create, edit, and take quizzes dynamically. 
@@ -45,8 +56,12 @@ function Projects() {
         <h2>My Work</h2>
         <div className="projects-grid">
           {projectData.map((project, index) => (
-            <div className="portfolio-item" key={index}>
+            <div
+              className={`portfolio-item ${project.title === 'DeveloperTok' ? 'developer-tok' : ''}`}
+              key={index}
+            >
               <img src={project.image} alt={project.title} />
+              {project.isWip && <div className="wip-badge"></div>}
               <div className="content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
