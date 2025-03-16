@@ -56,3 +56,43 @@
 .portfolio-item .btn {
     margin-top: 1rem;
 }
+
+/* Add these responsive styles */
+@media screen and (max-width: 768px) {
+    .projects {
+        padding: 2rem 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .portfolio-item.developer-tok {
+        margin-bottom: 1.5rem;
+    }
+
+    .portfolio-item.developer-tok .content {
+        padding: 1.2rem;
+    }
+
+    .portfolio-item.developer-tok .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust the gradient effects for mobile */
+    .portfolio-item.developer-tok::after {
+        height: 35%;
+        transform: translateY(25%);
+    }
+
+    /* Adjust WIP badge position for mobile */
+    .wip-badge {
+        top: 8px;
+        right: 8px;
+        width: 10px;
+        height: 10px;
+    }
+}

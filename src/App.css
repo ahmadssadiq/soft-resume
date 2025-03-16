@@ -89,6 +89,41 @@ textarea {
   }
 }
 
+/* Add these responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Adjust portfolio grid for mobile */
+  .portfolio {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .portfolio-item {
+    margin: 0 1rem;
+  }
+
+  .portfolio-item .content {
+    padding: 1rem;
+  }
+
+  .portfolio-item .content h3 {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-item .content p {
+    font-size: 0.85rem;
+  }
+}
+
 /* General Reset */
 *,
 *::before,
