@@ -14,7 +14,7 @@ import HW from '../images/healthandweather.png';
 const projectData = [
   {
     title: 'DeveloperTok',
-    description: 'A social media platform designed specifically for developers to share short-form coding tips, tricks, and solutions. Built with React, Node.js, and MongoDB, featuring video uploads, code snippet sharing, and a recommendation algorithm.',
+    description: 'A cutting-edge microlearning platform designed to revolutionize the way coding is taught and learned. Inspired by TikTok, DeveloperTok delivers bite-sized, one-minute coding lessons across various topics in a fun, interactive, and highly accessible format. Built with React, Node.js, and MongoDB.',
     image: NoteAppImage, // Placeholder - replace with DevTok image when available
     link: '#/projects/DeveloperTok',
     isWip: true, // Flag to indicate work in progress
