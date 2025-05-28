@@ -36,6 +36,17 @@ function SpotlightBox({ children, color = 'rgba(249,115,22,0.3)' }) {
 function Experience() {
     const experiences = [
         {
+            company: 'ACTEX Learning',
+            role: 'Quality Assurance Engineer',
+            duration: 'May 2025 – Present',
+            responsibilities: [
+                'Ran cross-platform smoke & regression tests on macOS, iOS, and web builds of the Eureka! e-reader.',
+                'Logged defects with repro steps, screenshots, and severity tags in Asana; collaborated with devs to triage issues.',
+                'Drafted a “Getting Started” README and reusable test-case templates to onboard future testers.',
+                'Expanded the suite with edge-case scenarios (offline mode, update-over-install, accessibility compliance).',
+            ],
+        },
+        {
             company: 'DuneAI',
             role: 'Robotics Software Engineer',
             duration: 'Jun 2024 - Aug 2024',
@@ -73,6 +84,7 @@ function Experience() {
 
     // Define an array of gradient colours for each experience box
     const colors = [
+        'rgba(58,134,255,0.3)', // 3a86ff
         'rgba(214,40,40,0.3)',   // d62828
         'rgba(247,127,0,0.3)',    // f77f00
         'rgba(252,191,73,0.3)'    // fcbf49

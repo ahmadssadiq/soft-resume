@@ -12,7 +12,10 @@
 
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* each column ≥280 px, otherwise stretch to fill */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* force every *row* to be the same height as the tallest item in that row */
+    grid-auto-rows: 1fr;
     gap: 2rem;
 }
 
@@ -20,7 +23,14 @@
     position: relative;
     overflow: hidden;
     border-radius: 0.5rem;
+    display: flex;
+    /* NEW */
+    flex-direction: column;
+    /* NEW */
+    height: 100%;
+    /* NEW */
 }
+
 
 .spotlight-overlay {
     position: absolute;
@@ -50,8 +60,12 @@
     border-radius: 0.5rem;
     padding: 1.5rem;
     transition: transform 0.3s ease;
-    position: relative;
-    /* Ensures stacking context with the overlay */
+    display: flex;
+    /* NEW */
+    flex-direction: column;
+    /* NEW */
+    height: 100%;
+    /* NEW */
 }
 
 .experience-item:hover {
