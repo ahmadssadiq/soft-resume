@@ -36,7 +36,7 @@ function SpotlightBox({ children, color = 'rgba(249,115,22,0.3)' }) {
 function Experience() {
     const experiences = [
         {
-            company: 'ACTEX Learning',
+            company: 'ACTEX Learning, MA USA',
             role: 'Quality Assurance Engineer',
             duration: 'May 2025 – Present',
             responsibilities: [
