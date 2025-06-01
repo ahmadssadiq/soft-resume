@@ -8,11 +8,21 @@ import BPD1 from '../images/BostonPoliceOvertime1.png';
 import QZ from '../images/QuizIt.png';
 import HW from '../images/healthandweather.png';
 import DT from '../images/developertok.png';
+import CBSImage from '../images/CBS-TA.png';   // placeholder – replace when ready
 // You'll need to add an image for DeveloperTok
 // For now, we'll use a placeholder reference
 // import DevTok from '../images/DeveloperTok.png';
 
 const projectData = [
+  {
+    title: 'CBS-TA Performance Analysis',
+    description: `Co-authored a research study profiling Conflict-Based Search with Task Assignment (CBS-TA) on grid benchmarks. 
+    Measured runtime, memory, cache behaviour for up to 100 agents, identified quadratic conflict growth, and proposed heuristics, 
+    memory-layout and parallelization optimisations.`,
+    image: CBSImage,
+    link: '#/projects/CbsTA',          // internal route for the detail page
+    // isWip: true,                    // uncomment if you want the WIP badge
+  },
   {
     title: 'DeveloperTok',
     description: 'A cutting-edge microlearning platform designed to revolutionize the way coding is taught and learned. Inspired by TikTok, DeveloperTok delivers bite-sized, one-minute coding lessons across various topics in a fun, interactive, and highly accessible format. Built with React, Node.js, and MongoDB.',

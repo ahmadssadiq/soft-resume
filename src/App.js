@@ -10,6 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import HealthAndWeather from './components/HealthAndWeather';
 import DuneAI from './components/DuneAI';
 import DeveloperTok from './components/DeveloperTok';
+import CbsTA from './components/CbsTA';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/projects/Health-And-Weather" element={<HealthAndWeather />} />
         <Route path="/projects/DeveloperTok" element={<DeveloperTok />} />
         <Route path="/experience/DuneAI" element={<DuneAI />} />
+        <Route path="/projects/CbsTA" element={<CbsTA />} />
       </Routes>
     </Router>
   );
