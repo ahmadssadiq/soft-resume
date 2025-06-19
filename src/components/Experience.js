@@ -36,13 +36,25 @@ function SpotlightBox({ children, color = 'rgba(249,115,22,0.3)' }) {
 function Experience() {
     const experiences = [
         {
+            company: 'IWM',
+            role: 'Full-Stack Fintech Developer',
+            duration: 'Mar 2024 - May 2024',
+            responsibilities: [
+                'Built a complete React Native application with TypeScript, Node.js/Express backend and PostgreSQL database.',
+                'Developed sophisticated waitlist ranking system inspired by Monzo\'s approach with logarithmic scaling.',
+                'Created streamlined 5-step onboarding flow reducing registration time to under 5 minutes.',
+                'Integrated AppsFlyer SDK for professional attribution tracking and deep linking capabilities.',
+            ],
+            link: '#/experience/IWM'
+        },
+        {
             company: 'ACTEX Learning, MA USA',
             role: 'Quality Assurance Engineer',
             duration: 'May 2025 – Present',
             responsibilities: [
                 'Ran cross-platform smoke & regression tests on macOS, iOS, and web builds of the Eureka! e-reader.',
                 'Logged defects with repro steps, screenshots, and severity tags in Asana; collaborated with devs to triage issues.',
-                'Drafted a “Getting Started” README and reusable test-case templates to onboard future testers.',
+                'Drafted a "Getting Started" README and reusable test-case templates to onboard future testers.',
                 'Expanded the suite with edge-case scenarios (offline mode, update-over-install, accessibility compliance).',
             ],
         },
@@ -60,7 +72,7 @@ function Experience() {
         },
         {
             company: 'AheadCare',
-            role: 'Startup Technical Engineer',
+            role: 'CEO',
             duration: 'Jun 2023 - Mar 2024',
             responsibilities: [
                 'Developed an ML Predictive FAQ system using LangChain.',
@@ -84,10 +96,11 @@ function Experience() {
 
     // Define an array of gradient colours for each experience box
     const colors = [
-        'rgba(58,134,255,0.3)', // 3a86ff
-        'rgba(214,40,40,0.3)',   // d62828
-        'rgba(247,127,0,0.3)',    // f77f00
-        'rgba(252,191,73,0.3)'    // fcbf49
+        'rgba(138,43,226,0.3)',  // 8a2be2 - purple for IWM (now first)
+        'rgba(58,134,255,0.3)', // 3a86ff - blue for ACTEX
+        'rgba(214,40,40,0.3)',   // d62828 - red for DuneAI
+        'rgba(247,127,0,0.3)',    // f77f00 - orange for AheadCare
+        'rgba(252,191,73,0.3)'    // fcbf49 - yellow for Starlink
     ];
 
     return (

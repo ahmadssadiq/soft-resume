@@ -5,8 +5,9 @@
     margin-right: 30px;
     margin-left: 30px;
     margin-top: 60px;
-    border-radius: 9px;
-    background-color: #1e1e1e;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
 }
 
 .about-content {
@@ -26,14 +27,14 @@
 
 .about-text p {
     color: var(--secondary-color);
+    line-height: 1.6;
 }
 
 .code-block {
-
-    border: 1px solid #d01111;
-    /* Light blue border */
-    border-radius: 5px;
-    /* Rounded corners */
+    border: 1px solid #444;
+    border-radius: 3px;
     padding: 2px 6px;
     font-family: monospace;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
 }

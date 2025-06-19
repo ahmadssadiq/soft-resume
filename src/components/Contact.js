@@ -47,12 +47,6 @@ function Contact() {
                             </div>
                             <button id="contactButton" className="contact-btn" type="submit">
                                 Send Email
-                                <span className="star-1"></span>
-                                <span className="star-2"></span>
-                                <span className="star-3"></span>
-                                <span className="star-4"></span>
-                                <span className="star-5"></span>
-                                <span className="star-6"></span>
                             </button>
                             {isSent && <div className="notification success">Your message has been sent successfully!</div>}
                         </form>

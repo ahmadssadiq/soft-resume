@@ -24,13 +24,9 @@
     overflow: hidden;
     border-radius: 0.5rem;
     display: flex;
-    /* NEW */
     flex-direction: column;
-    /* NEW */
     height: 100%;
-    /* NEW */
 }
-
 
 .spotlight-overlay {
     position: absolute;
@@ -54,18 +50,14 @@
     opacity: 1;
 }
 
-/* Experience item styling remains intact */
 .experience-item {
     background-color: transparent;
     border-radius: 0.5rem;
     padding: 1.5rem;
     transition: transform 0.3s ease;
     display: flex;
-    /* NEW */
     flex-direction: column;
-    /* NEW */
     height: 100%;
-    /* NEW */
 }
 
 .experience-item:hover {
@@ -94,7 +86,27 @@
     margin-bottom: 0.5rem;
 }
 
-/* Code block styling, if needed elsewhere */
+.experience-item .btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid #555;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    align-self: flex-start;
+}
+
+.experience-item .btn:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+    border-color: var(--primary-color);
+}
+
+/* Code block styling */
 .code-block {
     border: 1px solid #d01111;
     border-radius: 5px;

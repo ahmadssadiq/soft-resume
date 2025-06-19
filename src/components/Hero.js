@@ -28,33 +28,37 @@ function Hero() {
 
     return (
         <section id="hero" className="hero">
-            <div className="container hero-content">
-                <img src={profilePic} alt="Ahmad Sadiq" />
-                <h1>Hi, I'm Ahmad Sadiq</h1>
-
-                {/* Loader Effect (Replacing <p>Software Engineer</p>) */}
-                <div className="loader">
-                    <div className="words">
-                        <span className="word">Software Engineer</span>
-                        <span className="word">CS @ Boston University</span>
-                        <span className="word">Football Lover</span>
-                        <span className="word">Tennis Enthusiast</span>
-                    </div>
+            <div className="hero-content">
+                <div className="profile-section">
+                    <img src={profilePic} alt="Ahmad Sadiq" />
                 </div>
 
-                <div className="btns">
-                    <Link smooth to="/#projects" className="btn">
-                        View My Work
-                    </Link>
-                    <a
-                        href={resume}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn"
-                        style={{ marginLeft: '1rem' }}
-                    >
-                        View my Resume
-                    </a>
+                <div className="main-content">
+                    <h1>Hi, I'm Ahmad Sadiq</h1>
+
+                    {/* Loader Effect (Replacing <p>Software Engineer</p>) */}
+                    <div className="loader">
+                        <div className="words">
+                            <span className="word">Software Engineer</span>
+                            <span className="word">CS @ Boston University</span>
+                            <span className="word">Football Lover</span>
+                            <span className="word">Tennis Enthusiast</span>
+                        </div>
+                    </div>
+
+                    <div className="btns">
+                        <Link smooth to="/#projects" className="btn">
+                            View My Work
+                        </Link>
+                        <a
+                            href={resume}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn"
+                        >
+                            View my Resume
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
