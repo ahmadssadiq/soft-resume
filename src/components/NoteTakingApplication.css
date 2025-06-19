@@ -551,3 +551,84 @@
 .project-image-container:hover img {
     transform: scale(1.05);
 }
+
+/* Onboarding Flow Section */
+.onboarding-flow-section {
+    margin: 3rem 0;
+}
+
+.onboarding-flow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    border: 1px solid var(--medium-border-color);
+}
+
+.onboarding-step {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.onboarding-step:hover {
+    transform: translateY(-5px);
+}
+
+.onboarding-step img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 146, 43, 0.2);
+}
+
+.onboarding-step img:hover {
+    box-shadow: 0 12px 35px rgba(255, 146, 43, 0.4);
+    border-color: var(--accent-color);
+}
+
+.step-label {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive design for onboarding flow */
+@media (max-width: 1024px) {
+    .onboarding-flow-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .onboarding-flow-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .onboarding-step img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .onboarding-flow-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .onboarding-step img {
+        max-width: 250px;
+    }
+}

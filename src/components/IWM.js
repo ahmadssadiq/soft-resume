@@ -1,7 +1,15 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import Header from './Header';
 import Footer from './Footer';
 import './NoteTakingApplication.css';
+import finalAppVideo from '../images/FinalAppShowcase.mp4';
+import onboarding1 from '../images/onboarding1.PNG';
+import onboarding2 from '../images/onboarding2.PNG';
+import onboarding3 from '../images/onboarding3.PNG';
+import onboarding4 from '../images/onboarding4.PNG';
+import onboarding5 from '../images/onboarding5.PNG';
+import onboarding6 from '../images/onboarding6.PNG';
 
 function IWM() {
     return (
@@ -54,11 +62,38 @@ function IWM() {
                             revolutionize how millennial parents approach their children's financial education.
                         </p>
 
-                        {/* App Screenshots Section */}
-                        <div className="medium-image-container">
-                            <div className="image-placeholder">
-                                <p>📸 Onboarding Flow Screenshots</p>
-                                <small>5-step registration process</small>
+                        {/* Onboarding Flow Screenshots */}
+                        <div className="onboarding-flow-section">
+                            <h3 className="medium-subheading">📸 Onboarding Flow: From Sign-Up to Waitlist</h3>
+                            <p className="medium-paragraph">
+                                The streamlined 6-step onboarding process designed to reduce friction and maximize completion rates.
+                            </p>
+
+                            <div className="onboarding-flow-grid">
+                                <div className="onboarding-step">
+                                    <img src={onboarding1} alt="Onboarding Step 1 - Welcome Screen" />
+                                    <p className="step-label">Step 1: Welcome</p>
+                                </div>
+                                <div className="onboarding-step">
+                                    <img src={onboarding2} alt="Onboarding Step 2 - Account Setup" />
+                                    <p className="step-label">Step 2: Account Setup</p>
+                                </div>
+                                <div className="onboarding-step">
+                                    <img src={onboarding3} alt="Onboarding Step 3 - Personal Information" />
+                                    <p className="step-label">Step 3: Personal Info</p>
+                                </div>
+                                <div className="onboarding-step">
+                                    <img src={onboarding4} alt="Onboarding Step 4 - Verification" />
+                                    <p className="step-label">Step 4: Verification</p>
+                                </div>
+                                <div className="onboarding-step">
+                                    <img src={onboarding5} alt="Onboarding Step 5 - Preferences" />
+                                    <p className="step-label">Step 5: Preferences</p>
+                                </div>
+                                <div className="onboarding-step">
+                                    <img src={onboarding6} alt="Onboarding Step 6 - Waitlist Confirmation" />
+                                    <p className="step-label">Step 6: Waitlist Entry</p>
+                                </div>
                             </div>
                         </div>
 
@@ -147,7 +182,7 @@ function IWM() {
 
                         <h2 className="medium-heading">Results & Impact</h2>
                         <p className="medium-paragraph">
-                            The application successfully achieves target KPIs including >40% registration completion rates,
+                            The application successfully achieves target KPIs including &gt;40% registration completion rates,
                             matching Monzo's benchmark for fintech onboarding. The viral coefficient exceeds 1.2 users per
                             referral, indicating strong organic growth potential.
                         </p>
@@ -196,11 +231,23 @@ function IWM() {
                             </div>
                         </div>
 
-                        {/* Final App Screenshots */}
+                        {/* Final App Showcase Video */}
                         <div className="medium-image-container">
-                            <div className="image-placeholder">
-                                <p>📱 Final App Showcase</p>
-                                <small>Complete user journey demonstration</small>
+                            <h2 className="medium-heading">📱 Final App Showcase</h2>
+                            <div className="iwm-video-container">
+                                <video
+                                    controls
+                                    width="100%"
+                                    style={{
+                                        maxWidth: '600px',
+                                        height: 'auto',
+                                        borderRadius: '12px',
+                                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
+                                    }}
+                                >
+                                    <source src={finalAppVideo} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
 
@@ -227,7 +274,7 @@ function IWM() {
                         </div>
 
                         <div className="project-links">
-                            <a href="#/projects" className="btn medium-btn">← Back to Projects</a>
+                            <Link smooth to="/#projects" className="btn medium-btn">← Back to Projects</Link>
                         </div>
                     </div>
                 </article>
