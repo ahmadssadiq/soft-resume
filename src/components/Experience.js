@@ -38,7 +38,7 @@ function Experience() {
         {
             company: 'IWM',
             role: 'Founding Engineer',
-            duration: 'Mar 2024 - May 2024',
+            duration: 'Jun 2025 - Present',
             responsibilities: [
                 'Built a complete React Native application with TypeScript, Node.js/Express backend and PostgreSQL database.',
                 'Developed sophisticated waitlist ranking system inspired by Monzo\'s approach with logarithmic scaling.',
