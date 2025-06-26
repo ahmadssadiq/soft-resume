@@ -37,7 +37,7 @@ function Experience() {
     const experiences = [
         {
             company: 'IWM',
-            role: 'Full-Stack Fintech Developer',
+            role: 'Founding Engineer',
             duration: 'Mar 2024 - May 2024',
             responsibilities: [
                 'Built a complete React Native application with TypeScript, Node.js/Express backend and PostgreSQL database.',
