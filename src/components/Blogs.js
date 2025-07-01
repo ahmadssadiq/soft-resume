@@ -3,15 +3,15 @@ import './Blogs.css';
 
 const BLOGS = [
     {
-        title: "Big Technology Turns Five: Here's...",
-        subtitle: 'Big Technology',
+        title: "Why AI Search Is the Next Frontier",
+        subtitle: 'AI-driven SEO',
         url: 'https://substack.com/home/post/p-167306788',
         readTime: '6m read',
-        image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80', // Unsplash placeholder
+        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80', // Unsplash: person holding white android smartphone
     },
 ];
 
-const PLACEHOLDER_COUNT = 9;
+const PLACEHOLDER_COUNT = 7;
 
 function Blogs() {
     return (
