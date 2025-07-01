@@ -12,6 +12,7 @@ import DuneAI from './components/DuneAI';
 import DeveloperTok from './components/DeveloperTok';
 import CbsTA from './components/CbsTA';
 import IWM from './components/IWM';
+import Blogs from './components/Blogs';
 
 function App() {
   return (
