@@ -8,12 +8,14 @@
     border-radius: 8px;
     background-color: #1a1a1a;
     border: 1px solid #333;
+
 }
 
 .about-content {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+
 }
 
 .about-text {

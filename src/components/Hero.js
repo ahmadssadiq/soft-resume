@@ -3,7 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import './Hero.css';
 import profilePic from '../images/profile.jpg';
 import resume from '../images/Ahmad_Sadiq_Resume_jan29.pdf';
-import Balatro from '../Balatro/Balatro';
+import LiquidChrome from '../LiquidChrome/LiquidChrome';
 
 function Hero() {
     useEffect(() => {
@@ -52,21 +52,7 @@ function Hero() {
                     </div>
                 </div>
                 <div className="hero-animation">
-                    <Balatro
-                        spinRotation={-2.0}
-                        spinSpeed={7.0}
-                        offset={[0.0, 0.0]}
-                        color1="#DE443B"
-                        color2="#006BB4"
-                        color3="#162325"
-                        contrast={3.5}
-                        lighting={0.4}
-                        spinAmount={0.25}
-                        pixelFilter={745.0}
-                        spinEase={1.0}
-                        isRotate={false}
-                        mouseInteraction={true}
-                    />
+                    <LiquidChrome />
                 </div>
             </div>
         </section>

@@ -17,13 +17,14 @@
     background-repeat: repeat;
     background-size: 1091px 561px;
     background-position: 0 0;
-    padding: 6rem 2rem 2rem 2rem;
+    padding: 7rem 2rem 2rem 2rem;
 }
 
 .hero-row {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 90%;
+    max-width: 100%;
     max-width: 1400px;
     height: 600px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
