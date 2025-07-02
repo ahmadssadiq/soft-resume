@@ -1,0 +1,13 @@
+.hero-animation {
+  min-width: 200px;
+  min-height: 200px;
+  background: #222;
+  /* for debug */
+}
+
+.hero-animation .balatro-container {
+  min-width: 200px;
+  min-height: 200px;
+  background: #333;
+  /* for debug */
+}
