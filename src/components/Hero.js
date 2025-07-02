@@ -36,14 +36,6 @@ function Hero() {
                     </div>
                     <div className="main-content">
                         <h1>Hi, I'm Ahmad Sadiq</h1>
-                        <div className="loader">
-                            <div className="words">
-                                <span className="word">Software Engineer</span>
-                                <span className="word">CS @ Boston University</span>
-                                <span className="word">Football Lover</span>
-                                <span className="word">Tennis Enthusiast</span>
-                            </div>
-                        </div>
                         <div className="btns">
                             <Link smooth to="/#projects" className="btn">
                                 View My Work

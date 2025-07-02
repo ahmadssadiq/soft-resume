@@ -94,35 +94,22 @@
 .main-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    flex-grow: 1;
-    max-width: 400px;
+    align-items: center;
+    text-align: center;
+    max-width: 350px;
     min-width: 0;
+    width: 100%;
 }
 
 /* Main Heading */
 .hero-card h1 {
     font-size: 3rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     line-height: 1.1;
     color: var(--primary-color);
     letter-spacing: -0.02em;
-}
-
-/* Loader styling for descriptive text */
-.loader {
-    margin: 1.5rem 0 !important;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 1.1rem;
-    color: var(--secondary-color);
-    width: 350px;
-    height: 30px;
-    line-height: 30px;
-    position: relative;
-    overflow: hidden;
+    width: 100%;
 }
 
 .words {
@@ -141,38 +128,21 @@
     text-align: left;
 }
 
-@keyframes spinWords {
-    0% {
-        transform: translateY(0);
-    }
-
-    20% {
-        transform: translateY(-30px);
-    }
-
-    40% {
-        transform: translateY(-60px);
-    }
-
-    60% {
-        transform: translateY(-90px);
-    }
-
-    80% {
-        transform: translateY(-120px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
 /* Buttons Container */
 .btns {
     display: flex;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* Button styling - full width and centered text */
+.btn {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
 }
 
 /* Button styling - restored to glass-morphism */
